@@ -2,6 +2,7 @@
 #include <sys/select.h>
 #include <unistd.h>
 
+
 void run_select() {
   fd_set readfds;
   struct timeval tv;
@@ -10,6 +11,7 @@ void run_select() {
   while(1) {
     // Reset file descriptor set
     FD_ZERO(&readfds);
+    FD_SET(STDIN_FILENO, &readfds);
 
     // Add file descriptors to set
 
@@ -29,6 +31,11 @@ void run_select() {
     } else {
       // File descriptors ready in readfds
       // Process input
+      if(FD_ISSET(STDIN_FILENO, &readfds)) {
+        char input[100];
+        fgets(input, sizeof(input), stdin);
+        printf("Input: %s", input);
+      }
     }
   }
 }
