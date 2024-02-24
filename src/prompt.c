@@ -21,7 +21,7 @@ void run_prompt(){
 
   // print prompt
   printf("Enter command: ");
-  
+
   // read input
   fgets(input, MAX_PROMPT_SIZE, stdin);
 
@@ -32,7 +32,7 @@ void run_prompt(){
     tokens[count++] = token;
     token = strtok(NULL, " ");
   }
-  
+
   // print tokens
 //   print_array(tokens, count);
   process_prompt(tokens, count);

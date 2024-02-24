@@ -1,7 +1,5 @@
-#include "core.h"
-#include "prompt.h"
-#include <stdio.h>
-#include <string.h>
+#include "src/core.h"
+#include "src/prompt.h"
 
 int main() {
 

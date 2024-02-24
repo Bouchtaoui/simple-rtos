@@ -2,6 +2,8 @@
 #include <sys/select.h>
 #include <unistd.h>
 
+#include "core.h"
+
 
 void run_select() {
   fd_set readfds;
