@@ -6,8 +6,8 @@ void demo_queue();
 
 int main() {
 
-  //   run_prompt();
-  run_select();
+  run_prompt();
+  // run_select();
   // demo_queue();
 
   return 0;
